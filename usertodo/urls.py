@@ -27,6 +27,6 @@ router.register('todo', ToDoAPIView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('api/', include(router.urls)),
-    path('todo/', include(router.urls)),
+    path('api/', include(router.urls)),
+    #path('todo/', include(router.urls)),
 ]
