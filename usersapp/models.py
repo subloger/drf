@@ -8,3 +8,5 @@ class User(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
     email = models.EmailField(unique=True)
+    is_superuser = models.BooleanField(default=False, blank=True)
+    is_staff = models.BooleanField(default=False, blank=True)
