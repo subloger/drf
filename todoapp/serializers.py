@@ -2,11 +2,16 @@ from rest_framework import serializers
 from .models import Project, ToDo
 
 
-class ProjectModelSerializer(serializers.HyperlinkedModelSerializer):
+class ProjectModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         # fields = '__all__'
-        exclude =['repo_link']
+        exclude = ['repo_link']
+
+    # def validate(self, attrs):
+    #     print("a" * 60)
+    #     print(attrs)
+    #     return attrs
 
 
 class ToDoModelSerializer(serializers.HyperlinkedModelSerializer):
